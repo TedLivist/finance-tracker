@@ -20,24 +20,5 @@
 </div>
 
 <% if !@tracked_stocks.empty? %>
-  <table class="table table-bordered table-hover col-9">
-    <thead>
-      <tr>
-        <th scope="col">Ticker</th>
-        <th scope="col">Name</th>
-        <th scope="col">Price</th>
-        <th scope="col">Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @tracked_stocks.each do |stock| %>
-        <tr>
-          <th scope="row"><%= stock.ticker %></th>
-          <td><%= stock.name %></td>
-          <td><%= stock.last_price %></td>
-          <td>Action Placeholder</td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <%= render 'stocks/list' %>
 <% end %>
