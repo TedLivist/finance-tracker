@@ -15,8 +15,11 @@
     </div>
   <% end %>
 </div>
-<div id="results">
 
+<div id="results">
+</div>
+
+<% if !@tracked_stocks.empty? %>
   <table class="table table-bordered table-hover col-9">
     <thead>
       <tr>
@@ -37,5 +40,4 @@
       <% end %>
     </tbody>
   </table>
-  
-</div>
+<% end %>
