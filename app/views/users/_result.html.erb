@@ -1,7 +1,7 @@
 <%= render 'layouts/messages' %>
 
 <% if @stock %>
-  <div class="card card-header d-inline">
+  <div class="card card-header d-inline mt-2">
     <strong>Symbol: </strong><%= @stock.ticker %>
     <strong>Name: </strong><%= @stock.name %>
     <strong>Price: </strong><%= @stock.last_price %>
