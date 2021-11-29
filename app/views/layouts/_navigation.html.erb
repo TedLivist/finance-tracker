@@ -19,7 +19,9 @@
               Profile
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to 'Edit Profile', edit_user_registration_path, class: 'dropdown-item' %>
+              <%= link_to edit_user_registration_path, class: 'dropdown-item' do %>
+                <%= fa_icon 'edit' %> Edit Profile
+              <% end %>
               <a class="dropdown-item" href="#">Another action</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a>
