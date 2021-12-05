@@ -1,0 +1,13 @@
+<div class="results-block">
+  <%= render 'layouts/messages' %>
+</div>
+
+<% if @friend %>
+  <div class="card card-header d-inline mt-2">
+    <strong>Email: </strong><%= @friend %>
+    <strong>Name: </strong><%= @friend %>
+    <strong>Price: </strong><%= @friend %>
+
+    <%= link_to 'Follow friend', '#', class: 'btn btn-success mb-1' %>
+  </div>
+<% end %>
