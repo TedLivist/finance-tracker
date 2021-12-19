@@ -13,7 +13,11 @@
             <td>
               <strong>Actions: </strong><%= link_to 'View profile', '#', class: 'btn btn-sm btn-success' %>
 
-              <%= link_to 'Follow friend', '#', class: 'btn btn-sm btn-success' %>
+              <% if current_user.are_friends?(friend.id) %>
+                <span class="badge badge-warning">You are friends</span>
+              <% else %>
+                <%= link_to 'Follow friend', '#', class: 'btn btn-sm btn-success' %>
+              <% end %>
             </td>
           </tr>
         <% end %>
