@@ -59,4 +59,8 @@ class User < ApplicationRecord
     friends.excluding(self)
   end
 
+  def are_friends?(friend_id)
+    self.friends.where(id: friend_id).exists?
+  end
+
 end
