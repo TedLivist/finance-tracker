@@ -55,4 +55,8 @@ class User < ApplicationRecord
     matches('email', param)
   end
 
+  def except_current_user(friends)
+    friends.excluding(self)
+  end
+
 end
