@@ -3,13 +3,19 @@
 </div>
 
 <% if @friends %>
-  <% @friends.each do |friend| %>
-    <div class="card card-header d-inline-block mt-1">
-      <strong>Name: </strong><%= friend.full_name %>
-      <strong>Email: </strong><%= friend.email %>
-      <strong>View Profile: </strong><%= link_to 'View profile', '#', class: 'btn btn-sm btn-success' %>
+  <div class="card card-header d-inline-block">
+    <table class="col-md-12">
+      <tbody>
+        <% @friends.each do |friend| %>
+          <tr>
+            <td><strong>Name: </strong><%= friend.full_name %></td>
+            <td><strong>Email: </strong><%= friend.email %></td>
+            <td><strong>View Profile: </strong><%= link_to 'View profile', '#', class: 'btn btn-sm btn-success' %>
 
-      <%= link_to 'Follow friend', '#', class: 'btn btn-sm btn-success' %>
-    </div>
-  <% end %>
+            <%= link_to 'Follow friend', '#', class: 'btn btn-sm btn-success' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 <% end %>
